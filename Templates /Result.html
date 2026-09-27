@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result - Cloud Cost Optimization</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+        }
+
+        .navbar{
+            background:#007bff;
+            padding:15px;
+            text-align:center;
+        }
+
+        .navbar a{
+            color:white;
+            text-decoration:none;
+            margin:0 15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:80%;
+            max-width:900px;
+            margin:40px auto;
+        }
+
+        .title{
+            text-align:center;
+            color:#007bff;
+            margin-bottom:30px;
+        }
+
+        .result-card{
+            background:white;
+            padding:25px;
+            margin-bottom:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px #ccc;
+        }
+
+        .result-card h2{
+            color:#007bff;
+            margin-bottom:10px;
+        }
+
+        .highlight{
+            color:green;
+            font-weight:bold;
+            font-size:22px;
+        }
+
+        .btn{
+    display:inline-block;
+    margin:10px;
+    padding:12px 20px;
+    background:#007bff;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.btn:hover{
+    background:#0056b3;
+}
+        footer{
+            background:#007bff;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:30px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/data">Dataset Form</a>
+    <a href="/result">Result</a>
+</div>
+
+<div class="container">
+
+    <h1 class="title">Cloud Service Prediction Result</h1>
+
+    <div class="result-card">
+        <h2>Recommended Cloud Provider</h2>
+        <p class="highlight">{{ provider }}</p>
+    </div>
+
+    <div class="result-card">
+        <h2>Suggested Service</h2>
+        <p>{{ service }}</p>
+    </div>
+
+    <div class="result-card">
+        <h2>Estimated Monthly Cost</h2>
+        <p>{{ cost }}</p>
+    </div>
+
+    <div class="result-card">
+        <h2>Free Tier Availability</h2>
+        <p>Available</p>
+    </div>
+
+    <div class="result-card">
+    <h2>Optimization Suggestions</h2>
+
+    {% if provider == "Koyeb" %}
+        <ul>
+            <li>Use Koyeb Free Tier for small projects.</li>
+            <li>Ideal for student and testing applications.</li>
+            <li>Monitor resource usage regularly.</li>
+        </ul>
+
+    {% elif provider == "Google Cloud" %}
+        <ul>
+            <li>Use Compute Engine for scalable workloads.</li>
+            <li>Enable budget alerts.</li>
+            <li>Optimize storage usage.</li>
+        </ul>
+
+    {% elif provider == "AWS" %}
+        <ul>
+            <li>Use EC2 for production deployments.</li>
+            <li>Enable cost monitoring tools.</li>
+            <li>Use Auto Scaling when required.</li>
+        </ul>
+
+    {% endif %}
+</div>
+
+    <a href="/data" class="btn">Try Another Prediction</a>
+
+</div>
+
+<footer>
+    © 2026 Cloud Cost Optimization System
+</footer>
+</footer>
+
+</body>
+</html>
