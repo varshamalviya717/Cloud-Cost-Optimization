@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Cloud Cost Optimization System</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+        }
+
+        .navbar{
+            background:#007bff;
+            padding:15px;
+            text-align:center;
+        }
+
+        .navbar a{
+            color:white;
+            text-decoration:none;
+            margin:0 15px;
+            font-weight:bold;
+        }
+
+        .header{
+            text-align:center;
+            padding:30px;
+        }
+
+        .header h1{
+            color:#007bff;
+        }
+
+        .dashboard{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:20px;
+            padding:20px;
+        }
+
+        .card{
+    background:white;
+    width:250px;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+        .card h2{
+            color:#007bff;
+            margin-bottom:10px;
+        }
+
+        .actions{
+            text-align:center;
+            margin-top:30px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin:10px;
+            padding:12px 20px;
+            background:#007bff;
+            color:white;
+            text-decoration:none;
+            border-radius:5px;
+        }
+
+        .btn:hover{
+            background:#0056b3;
+        }
+
+        footer{
+            background:#007bff;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:40px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="actions">
+
+    <a href="/data" class="btn">Create Dataset</a>
+
+    <a href="/data" class="btn">Predict Service</a>
+
+    <a href="/budget_analysis" class="btn">Budget Analysis</a>
+
+    <a href="/report" class="btn">Reports</a>
+
+    <a href="/login_history" class="btn">Login History</a>
+
+    <a href="/logout" class="btn">Logout</a>
+
+</div>
+
+<div class="header">
+    <h1>Cloud Cost Optimization Dashboard</h1>
+    <p>Welcome, Super Admin | Manage Cloud Predictions & Reports</p>
+</div>
+
+<div class="dashboard">
+
+    <a href="/data" style="text-decoration:none;">
+        <div class="card">
+            <h1>📊</h1>
+            <h2>{{ total_datasets }}</h2>
+            <p>Total Datasets</p>
+        </div>
+    </a>
+
+    <a href="/data" style="text-decoration:none;">
+        <div class="card">
+            <h1>☁️</h1>
+            <h2>{{ predictions_generated }}</h2>
+            <p>Predictions Generated</p>
+        </div>
+    </a>
+
+    <a href="/report" style="text-decoration:none;">
+        <div class="card">
+            <h1>🏢</h1>
+            <h2>{{ cloud_providers }}</h2>
+            <p>Cloud Providers</p>
+        </div>
+    </a>
+
+    <a href="/login_history" style="text-decoration:none;">
+        <div class="card">
+            <h1>🔐</h1>
+            <h2>{{ login_history }}</h2>
+            <p>Login History</p>
+        </div>
+    </a>
+
+</div>
+
+<div class="card" style="width:80%; margin:auto; margin-top:30px;">
+    <h2>System Overview</h2>
+    <br>
+    <p>
+        This AI Driven Cloud Cost Optimization System helps predict
+        the most suitable cloud provider based on project requirements,
+        budget, storage, RAM, CPU and user traffic.
+    </p>
+</div>
+
+<footer>
+    © 2026 Cloud Cost Optimization System
+</footer>
+
+</body>
+</html>
