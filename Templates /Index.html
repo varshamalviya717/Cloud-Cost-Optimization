@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cloud Cost Optimization System</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.navbar{
+    background:#007bff;
+    padding:15px;
+    text-align:center;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+.hero{
+    text-align:center;
+    padding:120px 20px;
+    background:linear-gradient(to right,#e3f2fd,#f4f6f9);
+}
+
+.hero h1{
+    color:#007bff;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.btn{
+    background:#007bff;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.card{
+    background:white;
+    width:280px;
+    padding:25px;
+    margin:15px;
+    border-radius:12px;
+    box-shadow:0 0 10px #ccc;
+    display:inline-block;
+}
+
+.team{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.member{
+    background:white;
+    width:220px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 0 10px #ccc;
+    text-align:center;
+}
+
+.member img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+
+}
+
+footer{
+    background:#007bff;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#team">Our Team</a>
+    <a href="/register">Register</a>
+    <a href="/login">Login</a>
+    <a href="/dashboard">Dashboard</a>
+</div>
+
+<div class="hero">
+    <h1>Cloud Cost Optimization System</h1>
+    <p>
+        AI-powered platform for predicting the best cloud provider
+        and optimizing cloud costs based on project requirements.
+    </p>
+
+    <a href="/register" class="btn">Get Started</a>
+</div>
+
+<div class="section" id="about">
+
+    <h2>About Project</h2>
+    <br>
+
+    <p>
+        This project helps users choose the most suitable cloud
+        service provider based on budget, storage, RAM, users,
+        and application requirements.
+    </p>
+
+</div>
+
+<div class="section" id="features">
+
+    <h2>Features</h2>
+
+    <div class="card">
+        <h3>Cloud Prediction</h3>
+        <p>Predict the best cloud provider.</p>
+    </div>
+
+    <div class="card">
+        <h3>Budget Analysis</h3>
+        <p>Budget-wise cloud recommendations.</p>
+    </div>
+
+    <div class="card">
+        <h3>Free Tier Detection</h3>
+        <p>Suggest free cloud services.</p>
+    </div>
+
+    <div class="card">
+        <h3>Cost Optimization</h3>
+        <p>Reduce cloud infrastructure costs.</p>
+    </div>
+
+</div>
+
+<div class="section" id="team">
+
+    <h2>Our Team & Project Guides</h2>
+    <br><br>
+
+    <div class="team">
+
+        <div class="member">
+            <img src="{{ url_for('static', filename='images/varsha.png') }}">
+            <h3>Varsha Malviya</h3>
+            <p>Project Developer</p>
+        </div>
+
+        <div class="member">
+            <img src="{{ url_for('static', filename='images/vaishali.png') }}">
+            <h3>Vaishali Malviya</h3>
+            <p>Project Developer</p>
+        </div>
+
+        <div class="member">
+            <img src="{{ url_for('static', filename='images/tanushri.png') }}">>
+            <h3>Tanushri Satpute</h3>
+            <p>Project Developer</p>
+        </div>
+
+        <div class="member">
+            <img src="https://via.placeholder.com/100">
+            <h3>Prof. Tejas Shrigondekar</h3>
+            <p>Project Guide</p>
+        </div>
+
+        <div class="member">
+            <img src="https://via.placeholder.com/100">
+            <h3>Prof. Gaurav Patil</h3>
+            <p>Project Guide</p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Cloud Cost Optimization System
+</footer>
+
+</body>
+</html>
