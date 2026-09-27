@@ -14,7 +14,6 @@ The system includes user registration, email notifications, login tracking, dash
 Problem Statement
 
 Choosing the right cloud provider can be confusing due to varying pricing structures, service offerings, and resource requirements. Users often spend significant time comparing cloud platforms manually.
-
 This project solves that problem by providing automated cloud provider recommendations based on project needs and budget constraints.
 
 Key Features
