@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Budget Analysis</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f6f9;
+            padding:20px;
+        }
+
+        h1{
+            text-align:center;
+            color:#007bff;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+        }
+
+        th, td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#007bff;
+            color:white;
+        }
+
+        tr:nth-child(even){
+            background:#f2f2f2;
+        }
+
+        .back-btn{
+            display:inline-block;
+            margin-bottom:20px;
+            background:#007bff;
+            color:white;
+            padding:10px 15px;
+            text-decoration:none;
+            border-radius:5px;
+        }
+
+        .back-btn:hover{
+            background:#0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<a href="/dashboard" class="back-btn">Back to Dashboard</a>
+
+<h1>Budget Analysis Report</h1>
+
+<table>
+
+    <tr>
+        <th>Project Name</th>
+        <th>Budget</th>
+        <th>Provider</th>
+        <th>Service</th>
+        <th>Estimated Cost</th>
+        <th>Savings</th>
+    </tr>
+
+    {% for row in data %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>₹{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>₹{{ row[5] }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
