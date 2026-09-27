@@ -1,1 +1,142 @@
-hgh
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login - Cloud Cost Optimization System</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+        }
+
+        .navbar{
+            background:#007bff;
+            padding:15px;
+            text-align:center;
+        }
+
+        .navbar a{
+            color:white;
+            text-decoration:none;
+            margin:0 15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:400px;
+            margin:60px auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px #ccc;
+        }
+
+        h2{
+            text-align:center;
+            color:#007bff;
+            margin-bottom:20px;
+        }
+
+        label{
+            font-weight:bold;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin-top:5px;
+            margin-bottom:15px;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#007bff;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:#0056b3;
+        }
+
+        .links{
+            text-align:center;
+            margin-top:15px;
+        }
+
+        .links a{
+            text-decoration:none;
+            color:#007bff;
+            font-weight:bold;
+        }
+
+        footer{
+            background:#007bff;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:50px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/register">Register</a>
+    <a href="/login">Login</a>
+</div>
+
+<div class="container">
+
+    <h2>Super Admin Login</h2>
+
+    <form action="/login" method="post">
+
+        <label>Email Address</label>
+        <input type="email" name="email" required>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    <div class="links">
+
+        <p><a href="#">Forgot Password?</a></p>
+
+        <br>
+
+        <p>
+            Don't have an account?
+            <a href="/register">Register</a>
+        </p>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Cloud Cost Optimization System
+</footer>
+
+</body>
+</html>
